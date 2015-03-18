@@ -164,7 +164,7 @@ namespace boost {
     }
     template <class Element>
     inline Element find_set(Element x) {
-      return id_to_vertex[rep(&parent[0], get(id,x))];
+      return static_cast<Element>(id_to_vertex[rep(&parent[0], get(id,x))]);
     }
 
     template <class ElementIterator>
